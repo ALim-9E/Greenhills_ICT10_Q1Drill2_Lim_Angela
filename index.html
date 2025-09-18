@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://pyscript.net/releases/2025.7.3/core.css">
+    <script type="module" src="https://pyscript.net/releases/2025.7.3/core.js"></script>
+    <title>Basic Info on Me</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #1c6f1f;
+        }
+        form {
+            margin-bottom: 20px;
+        }
+        input, select {
+            margin: 10px 0;
+            padding: 8px;
+            width: 200px;
+        }
+        #output {
+            margin-top: 20px;
+            white-space: pre-wrap;
+            background: #f3f3f3;
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+
+        h1 {
+            color: #6ec771;
+        }
+
+        input[type="button"] {
+            background-color: #7af593;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        input[type="button"]:hover {
+            background-color: #7cdb81;
+        }
+
+
+    </style>
+</head>
+<body>
+
+    <form>
+        <h1>Basic Information</h1>
+        <input class="form-control" type="text" id="Fname" placeholder="Enter your first name here"><br>
+        <input type="number" id="Age" placeholder="Enter your age here"><br>
+        <select id="campus">
+            <label> Campuses: </label>
+            <option> OBMC Greenhills </option>
+            <option> OBMC Sta. Ana </option>
+            <option> OBMC Fairview </option>
+            <option> OBMC Las Pinas </option>
+            <option> OBMC Angeles </option>
+        </select>  <br>
+        <input type="button" value="collect" id="processButton" py-click="show_message">
+    </form>
+    <div id="output"></div>
+
+    <py-script src="main.py"></py-script>
+    
+</body>
+</html>
